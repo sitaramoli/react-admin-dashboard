@@ -1,0 +1,70 @@
+.filter {
+    display: flex;
+    gap: 0.8rem;
+    position: relative;
+    &__button {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        &__icon {
+            font-size: 1.6rem;
+            color: #c5c7cd;
+        }
+        &__text {
+            color: #4b506d;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+    }
+    &__options {
+        background-color: #363740;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        border-radius: 0.5rem;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-1rem);
+            border-color: transparent transparent #363740 transparent;
+            border-style: solid;
+            border-width: 0.5rem;
+        }
+        &__option {
+            color: #fff;
+            padding: 1rem 2rem;
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            &:not(:first-child) {
+                border-top: 1px solid #a4a6b3;
+            }
+            &:first-child {
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+            }
+            &:last-child {
+                border-bottom-left-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+            }
+
+            &--active {
+                position: relative;
+                background-color: #4b506d;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    border: 0.3rem solid #fff;
+                    border-radius: 50%;
+                    left: 10%;
+                    top: 40%;
+                }
+            }
+        }
+    }
+}

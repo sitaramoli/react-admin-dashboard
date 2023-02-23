@@ -1,0 +1,16 @@
+.button {
+    width: 100%;
+    background-color: #3751ff;
+    border: none;
+    border-radius: 0.8rem;
+    padding: 1.5rem 2.4rem 1.3rem 2.4rem;
+    font-family: "Mulish";
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.43;
+    letter-spacing: 0.02rem;
+    &:disabled {
+        background-color: #6b75b1;
+    }
+}

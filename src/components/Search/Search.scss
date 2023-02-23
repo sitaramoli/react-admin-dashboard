@@ -1,0 +1,25 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    .search-button {
+        border: none;
+        background-color: transparent;
+        &__icon {
+            font-size: 1.6rem;
+            color: #c5c7cd;
+        }
+    }
+    & input[type="text"] {
+        outline: none;
+        border: 0.1rem solid #a4a6b3;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        color: #a4a6b3;
+        font-size: 1.4rem;
+        &:focus {
+            border: 0.15rem solid #363740;
+        }
+    }
+}

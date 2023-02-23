@@ -1,0 +1,24 @@
+@import "./icons/style.scss";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: "Mullin";
+	font-size: 10px;
+}
+
+html {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+
+	/* Firefox */
+	&::-webkit-scrollbar {
+		display: none;
+		/* Chrome */
+	}
+}

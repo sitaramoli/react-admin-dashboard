@@ -1,0 +1,53 @@
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    &__name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #252733;
+    }
+    &__avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.2rem;
+        border-radius: 50%;
+        border: 0.15rem solid #dfe0eb;
+        width: 4.4rem;
+        height: 4.4rem;
+
+        &__img {
+            width: 4rem;
+            height: 100%;
+
+            & img {
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+}
+
+.profile-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dfe0eb;
+    padding: 1rem;
+    &__img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    &__name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #252733;
+    }
+}

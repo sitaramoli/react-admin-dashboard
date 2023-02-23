@@ -1,0 +1,92 @@
+.ticket {
+    &:hover {
+        background: rgba(55, 82, 255, 0.04);
+        cursor: pointer;
+    }
+    .ticket-details {
+        display: flex;
+        gap: 2.4rem;
+        &__avatar {
+            border-radius: 50%;
+            height: 4.4rem;
+            width: 4.4rem;
+            object-fit: cover;
+        }
+        &__ticket-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            &__title {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #252733;
+            }
+            &__days {
+                font-size: 1.2rem;
+                font-weight: 400;
+                color: #c5c7cd;
+            }
+        }
+    }
+
+    .name-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        &__name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #252733;
+        }
+        &__post-date {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #c5c7cd;
+        }
+    }
+
+    .date-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        &__date {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #252733;
+        }
+        &__time {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #c5c7cd;
+        }
+    }
+
+    .priority {
+        padding: 0.5rem 1.2rem;
+        color: #fff;
+        width: min-content;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 10rem;
+        &--high {
+            background-color: #f12b2c;
+        }
+        &--normal {
+            background-color: #29cc97;
+        }
+        &--low {
+            background-color: #fec400;
+        }
+    }
+
+    .delete-button {
+        font-size: 1.6rem;
+        color: #c5c7cd;
+    }
+
+    td {
+        padding: 2.4rem 3.1rem;
+        border-bottom: 0.15rem solid #dfe0eb;
+    }
+}

@@ -1,0 +1,39 @@
+.notifications {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__button {
+        border: none;
+        background-color: transparent;
+        &__icon {
+            font-size: 1.6rem;
+            color: #c5c7cd;
+        }
+    }
+}
+
+.notification-list {
+    width: 20rem;
+    height: 30rem;
+    background-color: #363740;
+    position: absolute;
+    top: 3.5rem;
+    border-radius: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #c5c7cd;
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding: 1rem;
+    &:after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -1rem;
+        border-color: transparent transparent #363740 transparent;
+        border-width: 1rem;
+        border-style: solid;
+    }
+}

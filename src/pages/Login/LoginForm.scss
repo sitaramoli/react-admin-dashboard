@@ -1,0 +1,22 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        &__title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #252733;
+        }
+        &__subtitle {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #9fa2b4;
+        }
+    }
+}

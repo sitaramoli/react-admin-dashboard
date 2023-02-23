@@ -1,0 +1,36 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 4rem 3.2rem;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        &__logo {
+            height: 4.8rem;
+            width: 4.8rem;
+        }
+        &__title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #a4a6b3;
+        }
+    }
+    &__footer {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #9fa2b4;
+        &__signup {
+            cursor: pointer;
+            color: #3751ff;
+            font-weight: 600;
+        }
+    }
+}

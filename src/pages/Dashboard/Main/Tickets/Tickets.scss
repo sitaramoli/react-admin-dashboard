@@ -1,0 +1,41 @@
+.tickets {
+    background-color: #fff;
+    border: 0.1rem solid #dfe0eb;
+    border-radius: 0.8rem;
+
+    .tickets-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 3.2rem;
+        padding-top: 3.2rem;
+        padding-bottom: 4.7rem;
+        padding-right: 3.2rem;
+        &__title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #252733;
+        }
+        &__actions {
+            display: flex;
+            gap: 3.2rem;
+        }
+    }
+
+    .tickets-body {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        .table-top {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #9fa2b4;
+            & th {
+                padding: 0 3.1rem 1.2rem 3.1rem;
+                border-bottom: 0.15rem solid #dfe0eb;
+            }
+        }
+
+        
+    }
+}

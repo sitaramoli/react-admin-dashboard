@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Sitaram Oli",
+      "email": "sitaramoli1998@gmail.com",
+      "password": "123456",
+      "img": "src/assets/images/avatar.png"
+    },
+    {
+      "fullname": "Sitaram Oli",
+      "email": "sitaramoli1122@gmail.com",
+      "password": "1234",
+      "confirm_password": "1234",
+      "id": 2
+    },
+    {
+      "fullname": "Sitaram Oli",
+      "email": "sita@ram.com",
+      "password": "1234",
+      "confirm_password": "1234",
+      "id": 3
+    }
+  ],
+  "tickets": [
+    {
+      "id": 3,
+      "img": "src/assets/images/customer-3.png",
+      "title": "When will I be charged this month?",
+      "update_day": "Updated 1 day ago",
+      "customer_name": "Robert Downey",
+      "post_date": "on 24.05.2019",
+      "date": "May 26,2019",
+      "time": "7: 30 PM",
+      "priority": "High"
+    },
+    {
+      "id": 4,
+      "img": "src/assets/images/customer-4.png",
+      "title": "Payment not going through",
+      "update_day": "Updated 2 days ago",
+      "customer_name": "Christian Bale",
+      "post_date": "on 24.05.2019",
+      "date": "May 25,2019",
+      "time": "5: 00 PM",
+      "priority": "Normal"
+    },
+    {
+      "id": 5,
+      "img": "src/assets/images/customer-5.png",
+      "title": "Unable to add replies",
+      "update_day": "Updated 2 days ago",
+      "customer_name": "Christian Bale",
+      "post_date": "on 24.05.2019",
+      "date": "May 25,2019",
+      "time": "4: 00 PM",
+      "priority": "High"
+    },
+    {
+      "id": 6,
+      "img": "src/assets/images/customer-6.png",
+      "title": "Downtime since last week",
+      "update_day": "Updated 3 days ago",
+      "customer_name": "Chris Evans",
+      "post_date": "on 23.05.2019",
+      "date": "May 25,2019",
+      "time": "2: 00 PM",
+      "priority": "Normal"
+    },
+    {
+      "id": 7,
+      "img": "src/assets/images/customer-7.png",
+      "title": "Referral Bonus",
+      "update_day": "Updated 4 days ago",
+      "customer_name": "Sam Smith",
+      "post_date": "on 22.05.2019",
+      "date": "May 25,2019",
+      "time": "11: 30 AM",
+      "priority": "Low"
+    },
+    {
+      "id": 8,
+      "img": "src/assets/images/customer-8.png",
+      "title": "How do I change my password?",
+      "update_day": "Updated 6 days ago",
+      "customer_name": "Steve Rogers",
+      "post_date": "on 21.05.2019",
+      "date": "May 24,2019",
+      "time": "1: 00 PM",
+      "priority": "Normal"
+    }
+  ]
+}

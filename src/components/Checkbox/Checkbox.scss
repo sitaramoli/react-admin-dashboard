@@ -1,0 +1,10 @@
+.checkbox {
+    align-self: flex-start;
+    display: flex;
+    gap: 1.2rem;
+    &__text {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #9fa2b4;
+    }
+}

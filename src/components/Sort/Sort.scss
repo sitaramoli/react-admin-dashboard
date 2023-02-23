@@ -1,0 +1,13 @@
+.sort {
+    display: flex;
+    gap: 0.8rem;
+    &__icon {
+        font-size: 1.6rem;
+        color: #c5c7cd;
+    }
+    &__text {
+        color: #4b506d;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}

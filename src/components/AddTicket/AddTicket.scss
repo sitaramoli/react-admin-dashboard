@@ -1,0 +1,32 @@
+.add-ticket {
+    &__button {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        &__icon {
+            font-size: 1.6rem;
+            color: #c5c7cd;
+        }
+        &__text {
+            font-family: "Mulish";
+            color: #4b506d;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+    }
+    &__ticket-modal {
+        display: flex;
+    }
+}
+
+.ticket-form {
+    background-color: #fff;
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 0.8rem;
+}
