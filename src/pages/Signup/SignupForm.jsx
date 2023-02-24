@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './../../components/Button/Button';
-import Input from './../../components/input/Input';
+import Input from './../../components/Input/Input';
 import LoadingSpinner from './../../components/LoadingSpinner/LoadingSpinner';
 import './SignupForm.scss';
 import useSignup from './useSignup';

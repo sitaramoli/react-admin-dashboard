@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './../../components/Button/Button';
 import Checkbox from './../../components/Checkbox/Checkbox';
-import Input from './../../components/input/Input';
+import Input from './../../components/Input/Input';
 import LoadingSpinner from './../../components/LoadingSpinner/LoadingSpinner';
 import './LoginForm.scss'
 import useLogin from './useLogin';
