@@ -7,8 +7,20 @@
         border: none;
         background-color: transparent;
         &__icon {
+            position: relative;
             font-size: 1.6rem;
             color: #c5c7cd;
+            &::after {
+                content: "";
+                width: 0.6rem;
+                height: 0.6rem;
+                border: 0.2rem solid #fff;
+                position: absolute;
+                top: 0;
+                right: -10%;
+                border-radius: 50%;
+                background-color: #3751ff;
+            }
         }
     }
 }
