@@ -1,31 +1,17 @@
 {
   "users": [
     {
-      "id": 1,
       "fullname": "Sitaram Oli",
       "email": "sitaramoli1998@gmail.com",
-      "password": "123456",
-      "img": "src/assets/images/avatar.png"
-    },
-    {
-      "fullname": "Sitaram Oli",
-      "email": "sitaramoli1122@gmail.com",
       "password": "1234",
       "confirm_password": "1234",
-      "id": 2
-    },
-    {
-      "fullname": "Sitaram Oli",
-      "email": "sita@ram.com",
-      "password": "1234",
-      "confirm_password": "1234",
-      "id": 3
+      "id": 1
     }
   ],
   "tickets": [
     {
       "id": 3,
-      "img": "src/assets/images/customer-3.png",
+      "img": "https://i.ibb.co/417M42v/customer-1.png",
       "title": "When will I be charged this month?",
       "update_day": "Updated 1 day ago",
       "customer_name": "Robert Downey",
@@ -36,7 +22,7 @@
     },
     {
       "id": 4,
-      "img": "src/assets/images/customer-4.png",
+      "img": "https://i.ibb.co/417M42v/customer-1.png",
       "title": "Payment not going through",
       "update_day": "Updated 2 days ago",
       "customer_name": "Christian Bale",
@@ -47,7 +33,7 @@
     },
     {
       "id": 5,
-      "img": "src/assets/images/customer-5.png",
+      "img": "https://i.ibb.co/mznqkZB/customer-3.png",
       "title": "Unable to add replies",
       "update_day": "Updated 2 days ago",
       "customer_name": "Christian Bale",
@@ -58,7 +44,7 @@
     },
     {
       "id": 6,
-      "img": "src/assets/images/customer-6.png",
+      "img": "https://i.ibb.co/KGyMTgb/customer-4.png",
       "title": "Downtime since last week",
       "update_day": "Updated 3 days ago",
       "customer_name": "Chris Evans",
@@ -69,7 +55,7 @@
     },
     {
       "id": 7,
-      "img": "src/assets/images/customer-7.png",
+      "img": "https://i.ibb.co/NVqVsFs/customer-5.png",
       "title": "Referral Bonus",
       "update_day": "Updated 4 days ago",
       "customer_name": "Sam Smith",
@@ -80,7 +66,7 @@
     },
     {
       "id": 8,
-      "img": "src/assets/images/customer-8.png",
+      "img": "https://i.ibb.co/fttvc5v/customer-7.png",
       "title": "How do I change my password?",
       "update_day": "Updated 6 days ago",
       "customer_name": "Steve Rogers",

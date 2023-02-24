@@ -5,16 +5,12 @@ import Modal from '../Modal/Modal';
 import Button from '../Button/Button';
 import './AddTicket.scss'
 import Dropdown from '../Dropdown/Dropdown';
-import useTickets from '../../hooks/useTickets';
 
-const AddTicket = () => {
+const AddTicket = ({ ticket, onInputChange, addTicket }) => {
     const [showAddTicketModal, setShowTicketModal] = useState(false);
     const handleAddTicketButtonClick = () => {
         setShowTicketModal(!showAddTicketModal);
     };
-
-    const { ticket, onInputChange, addTicket } = useTickets();
-
     const dropdownOptions = [
         {
             value: 'High',

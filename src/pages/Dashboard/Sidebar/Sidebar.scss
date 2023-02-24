@@ -42,6 +42,24 @@
             width: 100%;
             border-top: 0.1rem solid rgba(223, 224, 235, 0.06);
         }
+        & a {
+            text-decoration: none;
+            &.active {
+                .nav-item {
+                    border-left: 0.3rem solid #dde2ff;
+                    background-color: rgba(159, 162, 180, 0.08);
+                    &__icon {
+                        font-size: 1.6rem;
+                        color: #dde2ff;
+                    }
+                    &__title {
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: #dde2ff;
+                    }
+                }
+            }
+        }
     }
 
     .nav-item {
@@ -57,19 +75,6 @@
             font-size: 1.6rem;
             font-weight: 400;
             color: #a4a6b3;
-        }
-        .active {
-            border-left: 0.3rem solid #dde2ff;
-            background-color: rgba(159, 162, 180, 0.08);
-            &__icon {
-                font-size: 1.6rem;
-                color: #dde2ff;
-            }
-            &__title {
-                font-size: 1.6rem;
-                font-weight: 400;
-                color: #dde2ff;
-            }
         }
     }
 }

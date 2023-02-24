@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Modal from '../Modal/Modal'
-import img from '../../assets/images/avatar.png';
 import './Profile.scss';
 
 const Profile = () => {
     const user = {
+        img: "https://i.ibb.co/tC6GDv0/avatar.png",
         name: "Jones Ferdinand",
     };
     const [show, showModal] = useState(false);
@@ -19,13 +19,13 @@ const Profile = () => {
             <h4 className="profile__name">{user.name}</h4>
             <div className='profile__avatar' onClick={handleShow}>
                 <figure className="profile__avatar__img">
-                    <img src={img} alt={user.name} />
+                    <img src={user.img} alt={user.name} />
                 </figure>
             </div>
             <Modal show={show} handleClose={handleHide}>
                 <div className="profile-modal">
                     <figure >
-                        <img className='profile-modal__img' src={img} alt="img" />
+                        <img className='profile-modal__img' src={user.img} alt="img" />
                     </figure>
                     <h5 className="profile-modal__name">{user.name}</h5>
                 </div>

@@ -1,7 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { SearchContext } from '../../contexts/searchContext';
 import './Search.scss'
 
-const Search = ({ onQueryChange, query }) => {
+const Search = () => {
+    const [query, setQuery] = useContext(SearchContext);
+    const onQueryChange = (e) => {
+        setQuery(e.target.value);
+    }
 
     const [showSearchBar, setShowSearchBar] = useState(false);
     const onSearchClick = () => {

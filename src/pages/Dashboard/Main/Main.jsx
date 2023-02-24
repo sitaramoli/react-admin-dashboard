@@ -1,15 +1,11 @@
 import React from 'react'
-import useSearch from '../../../hooks/useSearch';
-import Header from './Header/Header'
-import './Main.scss';
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
 import Tickets from './Tickets/Tickets';
 
 const Main = () => {
-    const { query, onQueryChange } = useSearch();
     return (
         <div className='main'>
-            <Header query={query} onQueryChange={onQueryChange} />
-            <Tickets query={query} />
+            <Outlet />
         </div>
     )
 }

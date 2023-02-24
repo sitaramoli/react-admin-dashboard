@@ -1,16 +1,16 @@
 import React from 'react'
 import './Ticket.scss'
 
-const Ticket = ({ img, title, update_day, customer_name, post_date, date, time, priority, deleteTicket, id }) => {
+const Ticket = ({ img, title, update_day, customer_name, post_date, date, time, priority, deleteTicket, id, onTicketShow }) => {
     return (
         <tr className='ticket'>
             <td>
-                <div className="ticket-details">
-                    <figure>
+                <div className="ticket-details" >
+                    <figure id={id} onClick={onTicketShow}>
                         <img className="ticket-details__avatar" src={img} alt="user" />
                     </figure>
                     <div className="ticket-details__ticket-info">
-                        <h5 className="ticket-details__ticket-info__title">{title}</h5>
+                        <h5 className="ticket-details__ticket-info__title" >{title}</h5>
                         <h6 className="ticket-details__ticket-info__days">{update_day}</h6>
                     </div>
                 </div>

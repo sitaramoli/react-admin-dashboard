@@ -1,6 +1,7 @@
 import React from 'react'
 import './Sidebar.scss';
 import logo from '../../../assets/logo.svg';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -25,36 +26,40 @@ const SidebarNav = () => {
     const topNavList = [{
         icon: 'icon-overview',
         title: 'Overview',
-        active: false
+        path: '/dashboard/'
     },
     {
         icon: 'icon-ticket',
         title: 'Tickets',
-        active: true
+        path: '/dashboard/tickets'
+
 
     },
     {
         icon: 'icon-idea',
         title: 'Ideas',
-        active: false
+        path: '/dashboard/ideas'
 
     },
     {
         icon: 'icon-contact',
         title: 'Contacts',
-        active: false
+        path: '/dashboard/contacts'
+
 
     },
     {
         icon: 'icon-agent',
         title: 'Agents',
-        active: false
+        path: '/dashboard/agents'
+
 
     },
     {
         icon: 'icon-article',
         title: 'Articles',
-        active: false
+        path: '/dashboard/articles'
+
 
     }
     ];
@@ -62,13 +67,15 @@ const SidebarNav = () => {
     const bottomNavList = [{
         icon: 'icon-settings',
         title: 'Settings',
-        active: false
+        path: '/dashboard/settings'
+
 
     },
     {
         icon: 'icon-subscription',
         title: 'Subscriptions',
-        active: false
+        path: '/dashboard/subscriptions'
+
 
     }];
     const topNavItems = topNavList.map(navItem => <SidebarNavItem {...navItem} key={navItem.title} />);
@@ -87,12 +94,16 @@ const SidebarNav = () => {
         </nav>
     );
 };
-const SidebarNavItem = ({ icon, title }) => {
+const SidebarNavItem = ({ icon, title, path }) => {
 
-    return <div className='nav-item' >
-        <span className={`nav-item__icon ${icon}`}></span>
-        <p className={`nav-item__title`}>{title}</p>
-    </div>
+    return (
+        <NavLink to={path}>
+            <div className='nav-item' >
+                <span className={`nav-item__icon ${icon}`}></span>
+                <p className={`nav-item__title`}>{title}</p>
+            </div>
+        </NavLink>
+    );
 };
 
 export default Sidebar;

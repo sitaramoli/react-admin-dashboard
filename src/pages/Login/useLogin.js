@@ -30,7 +30,6 @@ const useLogin = () => {
         await axios.get(`http://localhost:3000/users`).then((response) => {
             const user = response.data.find(user => userCreditionals.email === user.email);
             if (user && userCreditionals.password === user.password) {
-                toast.success('logged in');
                 navigate('/dashboard');
             }
             else if (!user) {

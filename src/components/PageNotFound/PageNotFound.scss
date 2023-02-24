@@ -1,0 +1,11 @@
+.page-not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    &__title {
+        font-size: 3rem;
+        color: #363740;
+        font-weight: 700;
+    }
+}

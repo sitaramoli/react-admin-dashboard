@@ -6,18 +6,28 @@ const useTickets = () => {
     const [tickets, setTickets] = useState([]);
     const [loading, setLoading] = useState(false);
 
+    // show ticket model when ticket title is clicked
+    const [showTicketModal, setShowTicketModal] = useState(false);
+    const [activeTicket, setActiveTicket] = useState('');
+    const onTicketShow = (e) => {
+        setActiveTicket(tickets.find(ticket => ticket.id == e.target.id));
+        setShowTicketModal(true);
+    }
+    const onTicketClose = () => {
+        setShowTicketModal(false);
+    }
+
     // delete ticket
     const deleteTicket = async (e) => {
         setLoading(true);
-        const id = e.target.id;
-        await axios.delete(`http://localhost:3000/tickets/${id}`).then((response) => {
+        await axios.delete(`http://localhost:3000/tickets/${e.target.id}`).then((response) => {
             toast.success("Ticket deleted successfully");
         }).catch((error) => {
             toast.error(error);
         }).finally(() => {
-            const ticket = tickets.find(ticket => ticket.id == id);
+            const ticket = tickets.find(ticket => ticket.id == e.target.id);
             tickets.splice(tickets.indexOf(ticket), 1);
-            setTickets(tickets);
+            setTickets(tickets.sort((a, b) => b.id - a.id));
             setLoading(false);
         });
     };
@@ -27,7 +37,7 @@ const useTickets = () => {
         title: '',
         customer_name: 'John Doe',
         priority: 'Low',
-        img: "src/assets/images/customer-1.png",
+        img: "https://i.ibb.co/417M42v/customer-1.png",
         update_day: 'Updated 1 day ago',
     });
     const onInputChange = (e) => {
@@ -41,13 +51,24 @@ const useTickets = () => {
         const year = date.getFullYear();
         const hour = date.getHours();
         const minute = date.getMinutes();
-        await axios.post('http://localhost:3000/tickets', { post_date: `on ${day}.${month}.${year}`, time: `${hour}:${minute}`, date: `${month} ${day},${year}`, ...ticket }).then((response) => {
-            toast.success('Ticket added successfully');
-        })
-            .catch((error) => {
-                toast.error(error);
-            })
-            .finally(() => { });
+        const newTicket = { post_date: `on ${day}.${month}.${year}`, time: `${hour}:${minute}`, date: `${month} ${day},${year}`, ...ticket };
+        if (ticket.title === '') {
+            toast.error('Please describe your problem in title field');
+        }
+        else {
+            setLoading(true);
+            await axios.post('http://localhost:3000/tickets', { ...newTicket })
+                .then((response) => {
+                    setTickets([response.data, ...tickets].sort((a, b) => b.id - a.id));
+                    toast.success('Ticket added successfully');
+                })
+                .catch((error) => {
+                    toast.error(error);
+                })
+                .finally(() => {
+                    setLoading(false);
+                });
+        }
     };
 
     // get tickets
@@ -55,7 +76,7 @@ const useTickets = () => {
         setLoading(true);
         await axios.get('http://localhost:3000/tickets').
             then(function (response) {
-                setTickets(response.data);
+                setTickets((response.data).sort((a, b) => b.id - a.id));
             }).
             catch(function (error) {
                 toast.error(error);
@@ -69,7 +90,7 @@ const useTickets = () => {
         getTickets();
     }, []);
 
-    return { tickets, loading, addTicket, ticket, onInputChange, deleteTicket };
+    return { tickets, loading, addTicket, ticket, onInputChange, deleteTicket, onTicketShow, showTicketModal, activeTicket, onTicketClose };
 }
 
 export default useTickets;
