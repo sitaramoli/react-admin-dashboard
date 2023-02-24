@@ -1,4 +1,36 @@
 .overview {
     display: flex;
-    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    &__box {
+        width: 25.8rem;
+        height: 13.4rem;
+        padding: 2.4rem 3.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        border: 0.1rem solid #dfe0eb;
+        border-radius: 0.8rem;
+        background-color: #fff;
+        &:hover {
+            cursor: pointer;
+            border-color: #3751ff;
+            & p {
+                color: #3751ff;
+            }
+        }
+        &__text {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #9fa2b4;
+        }
+        &__number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #252733;
+        }
+    }
 }

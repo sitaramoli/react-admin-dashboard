@@ -43,7 +43,6 @@ const TicketsHeader = ({ filterKey, onFilterKeyChange, ticket, onInputChange, ad
 
 const TicketsBody = ({ filterKey, loading, deleteTicket, tickets, onTicketShow, activeTicket, onTicketClose, showTicketModal }) => {
     const [query] = useContext(SearchContext);
-    console.log(activeTicket);
     return (
         <>
             {showTicketModal && <TicketModal ticket={activeTicket} onTicketClose={onTicketClose} showTicketModal={showTicketModal} />}
@@ -70,7 +69,7 @@ const TicketsBody = ({ filterKey, loading, deleteTicket, tickets, onTicketShow, 
                         tickets.filter(ticket => query ? ticket.title.includes(query) : true)
                             .filter(ticket => filterKey ? ticket.priority.includes(filterKey) : true)
                             .map(ticket => {
-                                return <Ticket key={ticket.title} deleteTicket={deleteTicket} {...ticket} onTicketShow={onTicketShow} activeTicket={activeTicket} onTicketClose={onTicketClose} />
+                                return <Ticket key={ticket.title} deleteTicket={deleteTicket} {...ticket} onTicketShow={onTicketShow} onTicketClose={onTicketClose} />
                             })
                     }
                 </tbody>

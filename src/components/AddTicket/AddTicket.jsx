@@ -11,6 +11,10 @@ const AddTicket = ({ ticket, onInputChange, addTicket }) => {
     const handleAddTicketButtonClick = () => {
         setShowTicketModal(!showAddTicketModal);
     };
+    const onTicketSubmit = () => {
+        setShowTicketModal(!showAddTicketModal);
+        addTicket();
+    }
     const dropdownOptions = [
         {
             value: 'High',
@@ -36,7 +40,7 @@ const AddTicket = ({ ticket, onInputChange, addTicket }) => {
                 <div className="ticket-form">
                     <Input label='Ticket details' type='text' name='title' id='title' value={ticket.title} onChange={onInputChange} placeholder='Describe your problem' />
                     <Dropdown label='Priority' name='priority' id='priority' options={dropdownOptions} onChange={onInputChange} selected={ticket.priority} />
-                    <Button text='Submit' onClick={addTicket} type='button' />
+                    <Button text='Submit' onClick={onTicketSubmit} type='button' />
                 </div>
             </Modal>}
         </div>

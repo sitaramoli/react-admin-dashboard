@@ -8,7 +8,7 @@ const useTickets = () => {
 
     // show ticket model when ticket title is clicked
     const [showTicketModal, setShowTicketModal] = useState(false);
-    const [activeTicket, setActiveTicket] = useState('');
+    const [activeTicket, setActiveTicket] = useState({});
     const onTicketShow = (e) => {
         setActiveTicket(tickets.find(ticket => ticket.id == e.target.id));
         setShowTicketModal(true);

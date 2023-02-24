@@ -26,39 +26,39 @@ const SidebarNav = () => {
     const topNavList = [{
         icon: 'icon-overview',
         title: 'Overview',
-        path: '/dashboard/'
+        path: 'overview'
     },
     {
         icon: 'icon-ticket',
         title: 'Tickets',
-        path: '/dashboard/tickets'
+        path: 'tickets'
 
 
     },
     {
         icon: 'icon-idea',
         title: 'Ideas',
-        path: '/dashboard/ideas'
+        path: 'ideas'
 
     },
     {
         icon: 'icon-contact',
         title: 'Contacts',
-        path: '/dashboard/contacts'
+        path: 'contacts'
 
 
     },
     {
         icon: 'icon-agent',
         title: 'Agents',
-        path: '/dashboard/agents'
+        path: 'agents'
 
 
     },
     {
         icon: 'icon-article',
         title: 'Articles',
-        path: '/dashboard/articles'
+        path: 'articles'
 
 
     }
@@ -67,14 +67,14 @@ const SidebarNav = () => {
     const bottomNavList = [{
         icon: 'icon-settings',
         title: 'Settings',
-        path: '/dashboard/settings'
+        path: 'settings'
 
 
     },
     {
         icon: 'icon-subscription',
         title: 'Subscriptions',
-        path: '/dashboard/subscriptions'
+        path: 'subscriptions'
 
 
     }];
