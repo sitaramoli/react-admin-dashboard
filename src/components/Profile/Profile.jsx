@@ -25,7 +25,7 @@ const Profile = () => {
             <Modal show={show} handleClose={handleHide}>
                 <div className="profile-modal">
                     <figure >
-                        <img className='profile-modal__img' src={user.img} alt="img" />
+                        <img className='profile-modal__img' src={user.img} alt="user.img" />
                     </figure>
                     <h5 className="profile-modal__name">{user.name}</h5>
                 </div>

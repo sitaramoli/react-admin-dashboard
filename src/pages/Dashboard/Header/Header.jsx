@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Notifications from '../../../components/Notifications/Notifications';
 import Profile from '../../../components/Profile/Profile';
 import Search from '../../../components/Search/Search';

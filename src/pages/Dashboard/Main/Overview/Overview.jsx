@@ -23,7 +23,7 @@ const Overview = () => {
     return (
         <div className='overview'>
             {boxList.map((box) =>
-                <div className="overview__box" id={box.title}>
+                <div className="overview__box" key={box.title}>
                     <p className="overview__box__text">{box.title}</p>
                     <p className="overview__box__number">{box.count}</p>
                 </div>

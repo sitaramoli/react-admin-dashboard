@@ -22,7 +22,6 @@ const useLogin = () => {
             login(formData);
         }
     }
-
     const navigate = useNavigate();
 
     const login = async (userCreditionals) => {

@@ -3,9 +3,10 @@
     gap: 3rem;
     align-items: center;
     justify-content: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
     &__box {
-        width: 25.8rem;
-        height: 13.4rem;
+        flex: 1;
         padding: 2.4rem 3.2rem;
         display: flex;
         flex-direction: column;

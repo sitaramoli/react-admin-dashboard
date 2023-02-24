@@ -1,6 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
-import Tickets from './Tickets/Tickets';
+import { Outlet } from 'react-router-dom'
 
 const Main = () => {
     return (
