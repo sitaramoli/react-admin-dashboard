@@ -26,7 +26,7 @@ const useSignup = () => {
 
     const signup = async (formData) => {
         setLoading(true);
-        await axios.post('http://localhost:3000/users', { ...formData }).
+        await axios.post('https://react-admin-dashboard-395cd-default-rtdb.firebaseio.com/users.json', { ...formData }).
             then((response) => {
                 toast.success('Account created successfully');
                 navigate('/');

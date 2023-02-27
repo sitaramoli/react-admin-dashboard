@@ -20,7 +20,8 @@ const useTickets = () => {
     // delete ticket
     const deleteTicket = async (e) => {
         setLoading(true);
-        await axios.delete(`http://localhost:3000/tickets/${e.target.id}`).then((response) => {
+        await axios.delete(`https://react-admin-dashboard-395cd-default-rtdb.firebaseio.com/tickets/${e.target.id}/.json`).then((response) => {
+            console.log(response.data);
             toast.success("Ticket deleted successfully");
         }).catch((error) => {
             toast.error(error);
@@ -57,9 +58,10 @@ const useTickets = () => {
         }
         else {
             setLoading(true);
-            await axios.post('http://localhost:3000/tickets', { ...newTicket })
+            await axios.post('https://react-admin-dashboard-395cd-default-rtdb.firebaseio.com/tickets.json', { ...newTicket })
                 .then((response) => {
-                    setTickets([response.data, ...tickets].sort((a, b) => b.id - a.id));
+                    const id = response.data;
+                    setTickets([{ ...newTicket, id }, ...tickets]);
                     toast.success('Ticket added successfully');
                 })
                 .catch((error) => {
@@ -74,9 +76,12 @@ const useTickets = () => {
     // get tickets
     const getTickets = async () => {
         setLoading(true);
-        await axios.get('http://localhost:3000/tickets').
-            then(function (response) {
-                setTickets((response.data).sort((a, b) => b.id - a.id));
+        await axios.get('https://react-admin-dashboard-395cd-default-rtdb.firebaseio.com/tickets.json').
+            then((response) => {
+                const jsonString = JSON.stringify(Object.values(response.data));
+                const tickets = JSON.parse(jsonString);
+                console.log(tickets);
+                setTickets(tickets);
             }).
             catch(function (error) {
                 toast.error(error);

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { json, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const useLogin = () => {
@@ -26,8 +26,10 @@ const useLogin = () => {
 
     const login = async (userCreditionals) => {
         setLoading(true);
-        await axios.get(`http://localhost:3000/users`).then((response) => {
-            const user = response.data.find(user => userCreditionals.email === user.email);
+        await axios.get(`https://react-admin-dashboard-395cd-default-rtdb.firebaseio.com/users.json`).then((response) => {
+            const jsonString = JSON.stringify((Object.values(response.data)));
+            const users = JSON.parse(jsonString);
+            const user = users.find(user => userCreditionals.email === user.email);
             if (user && userCreditionals.password === user.password) {
                 navigate('/dashboard');
             }
